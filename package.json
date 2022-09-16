@@ -1,6 +1,7 @@
 {
   "name": "hsmc-code",
   "version": "0.1.0",
+  "homepage": "https://hsmc-coding-club.github.io/hsmc-code",
   "private": true,
   "dependencies": {
     "@blockly/theme-modern": "^2.1.42",

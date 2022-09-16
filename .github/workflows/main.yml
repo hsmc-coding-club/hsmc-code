@@ -28,6 +28,7 @@ jobs:
         run: |
           npm ci
           CI='' npm run build
+      # make sure you have a gh-pages branch before doing this
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:

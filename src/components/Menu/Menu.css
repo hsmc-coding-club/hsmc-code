@@ -1,0 +1,62 @@
+.menu {
+    transition: right 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: fixed;
+    right: 0;
+    top: 50px;
+    height: calc(100% - 50px);
+    width: min(calc(100% - 10px), 500px);
+    z-index: -1;
+    border-radius: 10px 0 0 10px;
+
+    background-color: var(--navbar-blue);
+    padding-left: 10px;
+    box-shadow: 0 0 10px black;
+}
+.menu.hidden {
+    right: -550px;
+}
+.menu a.lesson {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    transition: color 0.2s ease-in-out;
+}
+.menu a.lesson > * {
+    margin: 5px;
+}
+.menu a.completed {
+    color: var(--light-orange);
+}
+.menu a.active, .menu a:hover {
+    color: var(--light-green);
+}
+@media screen and (max-width: 500px) {
+    .menu {
+        border-radius: 0;
+    }
+}
+
+.progressBar {
+    width: 95%;
+    height: 1.5em;
+    border-radius: 1em;
+    background-color: var(--light-blue);
+    position: relative;
+    overflow: hidden;
+}
+.progressBar .progress {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.2s ease-out;
+    background-color: var(--light-orange);
+}
+.progressBar span {
+    position: absolute;
+    color: black;
+    left: 10px;
+    top: 0;
+    z-index: 2;
+}

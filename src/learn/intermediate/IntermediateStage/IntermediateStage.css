@@ -1,0 +1,22 @@
+.intermediateStage {
+    width: 500px;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    border-left: 3px solid var(--opaque-black)
+}
+.intermediateStage .instruction {
+    flex-grow: 1;
+    overflow-y: auto;
+    line-height: 1.5em;
+}
+.intermediateStage .instruction main {
+    background-color: var(--dark-blue);
+    padding: 5px;
+    border-radius: 5px;
+    position: sticky;
+    bottom: 0;
+}

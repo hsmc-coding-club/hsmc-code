@@ -1,0 +1,13 @@
+.workspace {
+    height: 100%;
+    width: 100%;
+}
+.blocklySvg {
+    background-color: transparent;
+}
+.blocklyToolboxDiv {
+    background-color: var(--navbar-blue);
+}
+.blocklyFlyoutBackground {
+    fill: var(--navbar-blue);
+}

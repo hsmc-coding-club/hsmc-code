@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: var(--paler-blue);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: var(--navbar-blue);
+  padding: 0.2em;
+  border-radius: 0.2em;
+}
+
+
+html, body, #root, .app {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --light-magenta: rgb(199,146,234);
+  --light-orange: rgb(254, 203, 107);
+  --light-blue: rgb(129, 169, 254);
+
+  --dark-blue: rgb(79, 119, 204);
+
+  --light-green: rgb(121, 218, 134);
+  --light-red: rgb(255, 85, 114);
+  --dark-red: rgb(255, 35, 55);
+  --paler-blue: rgb(54, 52, 71);
+  --navbar-blue: rgb(40,44,53);
+  --light-white: rgb(211, 211, 211);
+  --light-gray: rgb(136, 142, 152);
+  --opaque-black: rgba(0, 0, 0, 0.25);
+  --panel-hover: rgba(0, 0, 0, 0.30);
+  --divider-gray: rgb(189,197,211);
+
+  color-scheme: dark;
+
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--light-blue);
+}
+
+.btnrow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+button, .btn {
+  border: 1px solid var(--light-gray);
+  user-select: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+
+  color: black;
+  background-color: white;
+
+  /* override button defaults */
+  align-items: center;
+  font-size: unset;
+  font-family: unset;
+}
+button:hover, .btn:hover {
+  background-color: var(--light-gray);
+  color: white;
+}
+
+button.primary, .btn.primary {
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  color: white;
+}
+button.primary:hover, .btn.primary:hover {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+button.dark, .btn.dark {
+  background-color: var(--paler-blue);
+  border: 1px solid var(--paler-blue);
+  color: white;
+}
+button.dark:hover, .btn.dark:hover {
+  background-color: var(--navbar-blue);
+  border-color: var(--navbar-blue);
+}
+
+button.danger, .btn.danger {
+  background-color: var(--light-red);
+  border: 1px solid var(--light-red);
+  color: white;
+}
+button.danger:hover, .btn.danger:hover {
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
+  color: white;
+}
+
+button.disabled, .btn.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: var(--light-gray);
+}
+
+.beginnerView, .intermediateView, .sandboxView {
+  max-height: calc(100% - 50px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  box-sizing: border-box;
+}
+.notFound {
+  width: calc(100% - 30px);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.notFound p {
+  margin: 5px;
+  text-align: center;
+}
+img:not(.overlay) {
+  border-radius: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .intermediateView:after:has(.codeWorkspace), .beginnerView:after, .sandboxView:after {
+      content: "Coding is best done on a computer, not your phone! Please come back once you've found one.";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      text-align: center;
+      padding-block-start: 50px;
+      font-size: 24px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+}
